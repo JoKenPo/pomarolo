@@ -1,0 +1,15 @@
+{
+  "name": "pomarolo",
+  "version": "1.0.0",
+  "description": "Pomarolo - A Pomodoro Timer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-packager ."
+  },
+  "author": "Eduardo Almeida",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^13.1.7"
+  }
+}
