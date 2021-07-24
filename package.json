@@ -9,7 +9,7 @@
   },
   "author": "Eduardo Almeida",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "electron": "^13.1.7"
   }
 }
