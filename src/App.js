@@ -1,16 +1,22 @@
-import { Notifyer } from './Notifyer.js'
+import { Notifier } from './Notifier.js'
 import { Timer } from './Timer.js'
+import { Emitter } from './Emitter.js'
+
+const notify = Notifier.notify({
+  title: "title",
+  body: "body"
+})  
 
 const App = {
   async start() {
     try {
-      Timer.init(time);
-      // await Notifyer.init()
-      // Notifyer.notify({
-      //   title: "title",
-      //   body: "body"
-      // })
+      await Notifier.init()
 
+      Emitter.on('countdown-start', notify)
+
+      Emitter.on('countdown-end', Timer.init)
+
+      Timer.init();
     } catch (err) {
       console.log(err.message)
     }

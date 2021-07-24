@@ -1,4 +1,4 @@
-const Notifyer = {
+const Notifier = {
   async init() {
     const permission = await Notification.requestPermission();
     if(permission !== "granted") {
@@ -8,11 +8,11 @@ const Notifyer = {
     // Notifyer.notify()
   },
   notify({ title, body, icon }) {
-    new Notification(title, {
+    return () => new Notification(title, {
       body,
       icon
     })
   }
 }
 
-export { Notifyer }
+export { Notifier }
